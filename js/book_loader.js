@@ -54,7 +54,6 @@ function addANewBook(){
     "author": author,
     "image": imageLink,
     "genre": genre,
-    "flag": ''  
   })
   loadBooks();
 } 
