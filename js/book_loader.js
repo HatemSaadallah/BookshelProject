@@ -14,7 +14,7 @@ function loadBooks() {
   var bookData = "";
   var count = 0;
 
-  for (var i = 0; i < NUM_BOOKS; i++) {
+  for (var i = 0; i < BOOKS.length; i++) {
     book = BOOKS[i];
     if (!(selectedGenre == "All" || isBookGenre(book["genre"], selectedGenre)))
       continue;
