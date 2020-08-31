@@ -12,15 +12,63 @@
 </HEAD>
 
 <BODY>
-
+  
   <div class="container">
     <br /> <br />
 
     <div class="row">
-      <div class="col-md-10 header">
+      <div class="col-md-8 header">
         Hatem's Bookshelf
       </div>
-
+      <div class="col-md-2 newBookItem">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add a New
+          Book!</button>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add a new book</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class='addNewBook'>
+                <div class="col-md-12 oneInput">
+                  <label class="col-md-6 ">Title</label> <input id="titleSelected" class="col-md-6 " type="text" />
+                </div>
+                <div class="col-md-12 oneInput ">
+                  <label class="col-md-6">Author</label> <input id="authorSelected" class="col-md-6 author" type="text" />
+                </div>
+                <div class="col-md-12 oneInput ">
+                  <label class="col-md-6">Image Link</label> <input id="imageLinkSelected" class="col-md-6 " type="text" />
+                </div>
+                <div class="col-md-12 oneInput">
+                  <label class="col-md-6">Genre</label>
+                  <select name="cars" id="genreSelected" class="col-md-6">
+                    <OPTION value="All">All Genres</OPTION>
+                    <OPTION value="NonFiction">Non Fiction</OPTION>
+                    <OPTION value="Politics">Politics</OPTION>
+                    <OPTION value="Fiction">Fiction</OPTION>
+                    <OPTION value="ShortStories">Short Stories</OPTION>
+                    <OPTION value="Business">Business</OPTION>
+                    <OPTION value="Leadership">Leadership</OPTION>
+                    <OPTION value="Mystery">Mystery</OPTION>
+                    <OPTION value="Classics">Classics</OPTION>
+                    <OPTION value="Romance">Romance</OPTION>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button onClick="addANewBook()" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-md-2">
         <FORM>
           <SELECT class="form-control" id="genre" onChange="loadBooks()">
@@ -38,12 +86,12 @@
         </FORM>
       </div>
     </div>
-  </br> </br>
+    </br> </br>
     <div class="row" id="bookData">
 
     </div>
 
-    
+
     <script type='text/javascript' src="library/jquery/2.0.2/jquery.min.js"></script>
     <script type='text/javascript' src="library/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 

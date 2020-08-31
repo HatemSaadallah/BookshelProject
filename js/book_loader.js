@@ -40,3 +40,19 @@ function loadBooks() {
 
   document.getElementById("bookData").innerHTML = bookData;
 }
+
+
+function addANewBook(){
+  let title = document.getElementById("titleSelected");
+  let author = document.getElementById("authorSelected");
+  let imageLink = document.getElementById("imageLinkSelected");
+  let genre = document.getElementById("genreSelected");
+
+  BOOKS.push({
+    "title": title,
+    "author": author,
+    "image": imageLink,
+    "genre": genre
+  })
+  loadBooks();
+} 

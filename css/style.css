@@ -22,7 +22,12 @@ body {
     
     
 }
+.newBookItem{
 
+}
+.oneInput{
+    padding-top: 1em;
+}
 .parent {
     position: relative;
 }
