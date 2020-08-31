@@ -43,6 +43,7 @@ function loadBooks() {
 
 
 function addANewBook(){
+  console.log("triggered");
   let title = document.getElementById("titleSelected");
   let author = document.getElementById("authorSelected");
   let imageLink = document.getElementById("imageLinkSelected");
