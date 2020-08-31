@@ -1,4 +1,3 @@
-let NUM_BOOKS = 11;
 let BOOKS = [
     {
         "title": "Our Revolution: A Future to Believe In",
