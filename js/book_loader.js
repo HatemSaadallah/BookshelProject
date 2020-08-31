@@ -44,16 +44,17 @@ function loadBooks() {
 
 function addANewBook(){
   console.log("triggered");
-  let title = document.getElementById("titleSelected");
-  let author = document.getElementById("authorSelected");
-  let imageLink = document.getElementById("imageLinkSelected");
-  let genre = document.getElementById("genreSelected");
-
+  let title = document.getElementById("titleSelected").value;
+  let author = document.getElementById("authorSelected").value;
+  let imageLink = document.getElementById("imageLinkSelected").value;
+  let genre = document.getElementById("genreSelected").value;
+  console.log(title, author, imageLink, genre);
   BOOKS.push({
     "title": title,
     "author": author,
     "image": imageLink,
-    "genre": genre
+    "genre": genre,
+    "flag": ''  
   })
   loadBooks();
 } 
