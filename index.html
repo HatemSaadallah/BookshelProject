@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<HTML lang="en">
+
+<HEAD>
+  <META charset="utf-8">
+  <TITLE>Hatem's Bookshelf</TITLE>
+  <link href="library/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type='text/javascript' src="js/data.js"></script>
+  <script type='text/javascript' src="js/book_loader.js"></script>
+</HEAD>
+
+<BODY>
+
+  <div class="container">
+    <br /> <br />
+
+    <div class="row">
+      <div class="col-md-10 header">
+        Hatem's Bookshelf
+      </div>
+
+      <div class="col-md-2">
+        <FORM>
+          <SELECT class="form-control" id="genre" onChange="loadBooks()">
+            <OPTION value="All">All Genres</OPTION>
+            <OPTION value="NonFiction">Non Fiction</OPTION>
+            <OPTION value="Politics">Politics</OPTION>
+            <OPTION value="Fiction">Fiction</OPTION>
+            <OPTION value="ShortStories">Short Stories</OPTION>
+            <OPTION value="Business">Business</OPTION>
+            <OPTION value="Leadership">Leadership</OPTION>
+            <OPTION value="Mystery">Mystery</OPTION>
+            <OPTION value="Classics">Classics</OPTION>
+            <OPTION value="Romance">Romance</OPTION>
+          </SELECT>
+        </FORM>
+      </div>
+    </div>
+  </br> </br>
+    <div class="row" id="bookData">
+
+    </div>
+
+    
+    <script type='text/javascript' src="library/jquery/2.0.2/jquery.min.js"></script>
+    <script type='text/javascript' src="library/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script>
+      loadBooks();
+    </script>
+
+
+</BODY>
+
+</HTML>
